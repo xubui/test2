@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            background-color: lightgray;
+            margin: 0 auto;
+
+
+        }
+
+        #UL {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+        li:hover{
+            transform: rotateZ(20deg);
+
+        }
+    </style>
+    <script src="../chance color.js"></script>
+
+
+</head>
+<body>
+
+
+
+    <div id="container">
+        <ul id="UL">
+
+        </ul>
+
+    </div>
+
+<script>
+    var DivElement = document.getElementById("container");
+    var ul =document.getElementById("UL");
+    var column = 5, row = 5;
+    var per_width = DivElement.clientWidth / column;
+    var per_height = DivElement.clientHeight / row;
+
+    for(var i = 0; i< column* row; i++ ){
+
+        var Div = document.createElement("li");
+
+//        Div.style.backgroundColor = chancecolor();
+        Div.style.width  = per_width + "px";
+        Div.style.height  = per_height + "px";
+        Div.style.float = "left";
+        ul.appendChild(Div);
+
+
+    }
+    var liArray = document.getElementsByTagName("li");
+
+    for (var i = 0; i < liArray.length; i++){
+
+        var li = liArray[i];
+
+        li.style.background = "url('2.jpg')";
+        li.style.backgroundPositionX = i * -per_width + "px";
+        li.style.backgroundPositionY = parseInt(i / column) * -per_height + "px";
+
+
+    }
+
+    var speed = 10;
+
+    setInterval(function () {
+
+        speed += 10;
+
+        for (var i = 0; i < liArray.length; i++){
+
+
+            liArray[i].style.transform = "rotateZ("+ speed +"deg)";
+
+
+
+        }
+
+
+    },200)
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

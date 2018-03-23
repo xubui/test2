@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .scan-gold-pic{
+            padding: 1px 0;
+            width: 300px;
+            height: 300px;
+            background-color: #eee;
+        }
+        .scan-gold-pic .cc{
+            width:150px;
+            height: 150px;
+            background-color: #005f3c;
+            margin: 50px auto;
+            animation: revolve 1s linear infinite;
+        }
+        .scan-gold-pic .center-gold-pic{
+            width: 50%;
+            line-height: 2em;
+            text-align: center;
+            background-color: #fff;
+            margin: 0 auto
+        }
+        .scan-gold-pic .center-gold-pic:hover{
+            cursor: pointer;
+        }
+        .cc.stop{
+            animation-play-state: paused;
+        }
+
+        @keyframes revolve{
+            0%{
+                transform: rotate3d(0,0,1,0deg);
+            }
+            100%{
+                transform: rotate3d(0,0,1,360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="scan-gold-pic">
+    <div class="cc stop"></div>
+    <div class="center-gold-pic">Go!</div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".center-gold-pic").on("click",function(){
+            $(".cc").toggleClass("stop");
+        });
+    });
+</script>
+</body>
+</html>

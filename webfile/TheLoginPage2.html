@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企业工资系统</title>
+
+    <style>
+        div{
+            position: relative;
+            top:182px;
+            text-align: center;
+        }
+/*body{font-family: Gabriola;}*/
+    </style>
+</head>
+<body>
+
+<p style="text-align: center; color: blue; font-size: 50px;">企业工资管理系统</p>
+<div>
+<table>
+    <tr><form>
+        <input type="radio" name="cate" value="员工">员工
+        <input type="radio" name="cate" value="管理员">管理员
+    </form>
+    </tr>
+    <br>
+    <tr><input type="text"   id="text1" onclick="f1(event)" style="color: #999999"></tr>
+
+    <br>
+    <tr><input type="password"   id="text2" onclick="f1(event)" style="color:#999999;"></tr>
+    <br>
+    <tr><input type="button" value="注册">
+    <input type="button" value="登录"></tr>
+</table>
+    <p id="tip">
+
+    </p>
+</div>
+
+
+<script>
+//    function f1() {
+//        var obj3 = document.getElementById("tip");
+////            obj.value = null;
+//            obj3.innerText = "请输入账号~!";
+//
+//
+//    }
+//    function f2() {
+//        var obj3 = document.getElementById("tip");
+////            obj2.value = "请输入密码";
+//            obj3.innerText = "请输入密码~!";
+//   }
+    function f1(e){
+        var obj3 = document.getElementById("tip");
+
+    if(e.target.id == "text1"){
+        obj3.innerText = "请输入账号~!";
+    }
+
+        if(e.target.id == "text2"){
+            obj3.innerText = "请输入密码~!";
+        }
+
+}
+
+
+
+</script>
+</body>
+</html>

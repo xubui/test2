@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        #d1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            /*left: 0;*/
+            /*top: 0;*/
+            position: relative;
+        }
+
+        #d2 {
+            width: 5px;
+            height: 5px;
+            background-color: black;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor:nwse-resize ;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div id="d1">
+
+    <div id="d2"></div>
+
+    </div>
+
+
+<script>
+
+    var d1 = document.getElementById("d1");
+    var d2 = document.getElementById("d2");
+
+    d2.onmousedown = function () {
+
+        document.onmousemove = function () {
+//            var myevent = ev || event;
+            d1.style.width = event.x + "px";
+            d1.style.height = event.y + "px";
+
+        }
+
+    };
+        alert("234");
+    d2.onmouseup = function () {
+        alert("123");
+        document.onmousemove = null;
+
+    };
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

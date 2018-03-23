@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #leftdiv {
+            width:500px;
+            height: 500px;
+            position: absolute;
+            left: 0;
+            top:0;
+            border:  1px solid black;
+        }
+
+        #bgimg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+
+        }
+
+        #samlldiv {
+            width: 200px;
+            height:200px;
+            position: absolute;
+            background-color:gray;
+            left:0;
+            top:0;
+            opacity: 0.5;
+
+        }
+
+        #rightdiv {
+            width:500px;
+            height:500px;
+            position: absolute;
+            left:505px;
+            top:0;
+            overflow:hidden;
+            border:  1px solid black;
+
+        }
+
+        #IMG {
+            position: absolute;
+            width: 250%;
+            height:250%;
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div id="leftdiv" >
+    <img id="bgimg" src="../page%20design/3.jpg" >
+    <div id="samlldiv">
+
+    </div>
+</div>
+
+<div id="rightdiv">
+    <img id="IMG" src="../page%20design/3.jpg" >
+    </div>
+
+
+
+<script>
+    var leftdiv = document.getElementById("leftdiv");
+    var rightdiv = document.getElementById("rightdiv");
+    var samlldiv = document.getElementById("samlldiv");
+    var imgdiv = document.getElementById("IMG");
+
+    leftdiv.onmouseover = function () {
+        samlldiv.style.display = "block";
+        rightdiv.style.display = "block";
+        imgdiv.style.display = "block";
+
+    };
+    leftdiv.onmouseout = function () {
+        samlldiv.style.display = "none";
+        rightdiv.style.display = "none";
+        imgdiv.style.display = "none";
+    };
+
+    leftdiv.onmousemove = function (ev) {
+
+        var myevent = ev || event;
+        var newleft = myevent.clientX - (samlldiv.clientWidth / 2);
+        var newtop = myevent.clientY - (samlldiv.clientHeight / 2);
+
+        newleft < 0? newleft = 0 : newleft;
+        newtop < 0? newtop = 0 : newtop;
+
+        newleft > leftdiv.clientWidth - samlldiv.clientWidth? newleft = leftdiv.clientWidth - samlldiv.clientWidth : newleft;
+        newtop > leftdiv.clientHeight - samlldiv.clientHeight? newtop = leftdiv.clientHeight - samlldiv.clientHeight : newtop;
+
+        samlldiv.style.left = newleft + "px";
+        samlldiv.style.top = newtop + "px";
+
+        var scale = leftdiv.clientWidth / samlldiv.clientWidth;
+
+        imgdiv.style.left = -scale * newleft + "px";
+        imgdiv.style.top = -scale * newtop + "px";
+
+
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

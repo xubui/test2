@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*body{*/
+           /*color: black;*/
+            /*font-size: 100px;*/
+
+        /*}*/
+
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div id="d1"></div>
+
+<script>
+
+    document.body.onkeydown = function () {
+
+        document.body.innerHTML = event.keyCode;
+
+    }
+    var Div = document.getElementById("d1");
+    var num = 10;
+    document.body.onkeydown = function () {
+
+        if(event.keyCode == 39){
+
+            Div.style.left = Div.offsetLeft + num + "px";
+        }
+         if(event.keyCode == 37){
+
+            Div.style.left = Div.offsetLeft - num + "px";
+        }
+         if(event.keyCode == 38){
+
+            Div.style.top = Div.offsetTop - num + "px";
+        }
+         if (event.keyCode == 40)
+        {
+
+            Div.style.top = Div.offsetTop + num + "px";
+        }
+
+
+    }
+
+
+
+//    var key = parseInt(Math.random()*101);
+////          alert(key);
+//    switch (parseInt(key)){
+//
+//        case (90<key<=100):alert(hao);break;
+//        case (key<90):alert(cha);break;
+//             alert(key);
+//
+//
+//        default:alert("jiade");
+//
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

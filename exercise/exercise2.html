@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>在线测试页面</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <style>
+        *{ padding:0;margin:0;font-size:12px; }
+        /*没有写兼容代码*/
+        .a{ animation: go 10s infinite; animation-fill-mode:both; }
+        @keyframes go{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        .div{ width:500px;height:500px;border-radius:30%;background:rgba(255, 192, 203,0.5);border:2px solid pink; }
+    </style>
+</head>
+<body>
+<div class="div"></div>
+<button id="s">Start</button>
+<button id="e">Stop</button>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $("#s").click(function(){
+            $(".div").addClass("a");
+        });
+        $("#e").click(function(){
+            $(".div").removeClass("a");
+        });
+    });
+</script>
+</html>

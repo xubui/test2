@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="d1"></div>
+<div></div>
+<div> </div>
+<script>
+
+    var Div = document.getElementById("d1");
+    var hor_speed = 0;
+    var ver_speed = 0;
+    var timer = null;
+    document.body.onkeydown = function () {
+
+        switch (event.keyCode){
+
+            case 37: move(1,10); hor_speed = -10;break;
+            case 38: move(2,10); ver_speed = -10;break;
+            case 39: move(3,10); hor_speed = 10;break;
+            case 40: move(4,10); ver_speed = 10;break;
+
+            //封装 继承 多态
+
+                function move(a1,a2) {
+                    clearInterval(timer);
+
+                    timer = setInterval(function () {
+
+                       if(a1 === 1 || a1 === 3){
+                           if(Div.offsetLeft > document.body.clientWidth)
+                           {
+                               Div.style.left = "-100px";
+                           }
+                           if(Div.offsetLeft < -100)
+                           {
+                               Div.style.left = document.body.clientWidth + "px";
+                           }
+
+                           Div.style.left = Div.offsetLeft + hor_speed + "px";
+                       }
+                       if(a1 === 2 || a1 === 4) {
+                           if(Div.offsetTop > window.innerHeight)
+                           {
+                               Div.style.top = "-100px";
+                           }
+                           if(Div.offsetTop < -100)
+                           {
+                               Div.style.top = window.innerHeight + "px";
+                           }
+
+                           Div.style.top = Div.offsetTop + ver_speed + "px";
+                       }
+
+
+
+                    },a2);
+
+                }
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

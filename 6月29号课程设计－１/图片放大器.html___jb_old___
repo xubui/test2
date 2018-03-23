@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #leftDiv {
+            width: 500px;
+            height:500px;
+            margin: 0 auto;
+            border: 1px solid black ;
+            position: absolute;
+            left: 0;
+            top:0;
+        }
+
+        #bgImg {
+            width:100%;
+            height:100%;
+        }
+
+        #mengDiv {
+
+            width: 200px;
+            height:200px;
+            background-color: gray;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            /*display: none;*/
+        }
+
+        #rightDiv {
+            width:500px;
+            height:500px;
+            position:absolute;
+            border: 1px solid black;
+            left: 510px;
+            top: 0;
+            overflow:hidden;
+            /*display: none;*/
+
+        }
+
+        #bgImgT {
+
+            position: absolute;
+            width:250%;
+            height: 250%;
+            /*left: -100px;*/
+            /*top: -100px;*/
+            /*display:none;*/
+
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <div id="leftDiv">
+        <img id="bgImg" src="../page%20design/2.jpg" >
+
+        <div id="mengDiv">
+
+        </div>
+            </div>
+
+        <div id="rightDiv">
+            <img id="bgImgT" src="../page%20design/2.jpg" >
+        </div>
+
+
+
+    <script>
+        var leftDiv =document.getElementById("leftDiv");
+        var rightDiv = document.getElementById("rightDiv");
+        var mengDiv = document.getElementById("mengDiv");
+        var rightImg = document.getElementById("bgImgT");
+
+        leftDiv.onmouseover =function () {
+            rightDiv.style.display = "block";
+            rightImg.style.display = "block";
+            mengDiv.style.display = "block";
+        };
+
+        leftDiv.onmouseout = function () {
+            rightDiv.style.display = "none";
+            rightImg.style.display = "none";
+            mengDiv.style.display = "none";
+
+        };
+
+
+        leftDiv.onmousemove = function (ev) {
+            var myevent = event || ev;
+            var newleft = myevent.clientX -(mengDiv.clientWidth / 2);
+            var newtop = myevent.clientY - (mengDiv.clientHeight / 2);
+            newleft > leftDiv.clientWidth - mengDiv.clientWidth? newleft = leftDiv.clientWidth - mengDiv.clientWidth:newleft;
+            newtop > leftDiv.clientHeight - mengDiv.clientHeight? newtop = leftDiv.clientHeight - mengDiv.clientWidth:newtop;
+            newleft < 0? newleft= 0 : newleft;
+            newtop < 0? newtop= 0 : newtop;
+
+
+            mengDiv.style.left = newleft + "px";
+            mengDiv.style.top = newtop + "px";
+
+            //确定右侧区域的位置
+            var scale = leftDiv.clientWidth / mengDiv.clientWidth;
+            rightImg.style.left = -scale * newleft + "px";
+            rightImg.style.top = -scale * newtop + "px";
+
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

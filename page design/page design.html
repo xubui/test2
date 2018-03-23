@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大连民族学院校历</title>
+
+    <style>
+        body{
+            background-color: #b3d4fc;
+            margin: 0;
+
+        }
+        #s1 {
+            position: absolute;
+            width: 40%;
+            height: 45%;
+            background-color: #b3d4fc;
+            /*background-image: url("1.jpg");*/
+            background-size: cover;
+            margin: 0;
+        }
+        #s2 {
+            position: absolute;
+            width: 40%;
+            height: 55%;
+            background-color: aqua;
+            margin: 0;
+            top: 45%;
+
+        }
+        #s3 {
+            position: absolute;
+            width: 60%;
+            height: 45%;
+            background-color: aqua;
+            margin: 0;
+            left: 40%;
+
+        }
+        #s4 {
+            position: absolute;
+            width: 60%;
+            height: 55%;
+            background-color: #b3d4fc;
+            margin: 0;
+            top:45%;
+            left: 40%;
+        }
+        #s2_1 {
+            position: absolute;
+            width: 80%;
+            height: 80px;
+            background-color: lightgreen;
+            font-family: "Bodoni MT";
+            font-size: 50px;
+            text-align: center;
+            color: blue;
+        }
+        #s2_2 {
+            position: absolute;
+            width:60%;
+            height:50px;
+            background-color:yellow;
+            top: 90px;
+            font-size: 25px;
+            text-align: center;
+        }
+        #s2_3 {
+            position: absolute;
+            margin: 0;
+            top: 140px;
+        }
+        li{
+            color: indianred;
+            list-style: none;
+        }
+        p{
+            padding: 0;
+            margin: 5px;
+        }
+        #s3_1 {
+            position: absolute;
+            width: 60%;
+            height: 40px;
+            text-align: center;
+            margin: 0 auto;
+            /*background-color: yellow;*/
+            font-size: 30px;
+            top: 10px;
+            left: 25%;
+
+        }
+        #s4_1 {
+            position: absolute;
+            width: 60%;
+            height: 40px;
+            margin: 0 auto;
+            text-align: center;
+            /*background-color: yellow;*/
+            font-size: 30px;
+            top: 10px;
+            left: 25%;
+        }
+        #s4_2 {
+            position: absolute;
+            text-align: center;
+            left: 8%;
+            top: 100px;
+
+        }
+        td{
+            margin: 15px;
+            padding: 25px;
+
+        }
+        th{
+            margin: 0;
+            padding: 0;
+
+        }
+        td:hover{
+            font-size: 30px;
+        }
+        .Th {
+            margin: 0;
+            padding: 0;
+        }
+        #s1_2 {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            background-color: coral;
+            top: 0;
+            left: 140px;
+            transform: rotateZ(45deg);
+
+        }
+        #s1_1 {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            /*background-color: cyan;*/
+            top: 180px;
+            left: 20px;
+            transform: rotateZ(45deg);
+            overflow: hidden;
+
+
+        }
+        #s1_4 {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background-color: darkgoldenrod;
+            transform: rotateZ(45deg);
+            left: 60%;
+            top: -20px;
+        }
+        #s1_3 {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            background-color: sandybrown;
+            transform: rotateZ(45deg);
+            left: 55%;
+            top: 130px;
+
+        }
+        #s1_5 {
+
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            top: 28%;
+            left: 27%;
+            transform: rotateZ(45deg);
+            overflow: hidden;
+
+           }
+        .img{
+            position: absolute;
+            top: -70px;
+            left: -60px;
+            width:150%;
+            height: 150%;
+            transform: rotateZ(-45deg);
+        }
+        img:hover{
+           width:150%;
+            height: 150%;
+        }
+        #s5 {
+            width: 150px;
+            height: 400px;
+            background-color: cornflowerblue;
+            position: relative;
+            float: right;
+            border: solid;
+        }
+        .round {
+            border:15px solid transparent;
+            width:60%;
+            height: 40px;
+            padding:5px 10px;
+            border-image:url(4.png) 30 30 round;
+        }
+
+
+
+
+        #leftdiv {
+            width:500px;
+            height: 500px;
+            position: absolute;
+            left: 0;
+            top:0;
+            border:  1px solid black;
+        }
+
+        #bgimg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+        }
+
+        #samlldiv {
+            width: 200px;
+            height:200px;
+            position: absolute;
+            background-color:gray;
+            left:0;
+            top:0;
+            opacity:0;
+
+        }
+
+        #rightdiv {
+            position: absolute;
+            width: 60%;
+            height: 45%;
+            background-color: aqua;
+            margin: 0;
+            left: 40%;
+            overflow: hidden;
+
+        }
+
+        #IMG {
+            position: absolute;
+            width: 120%;
+            height:120%;
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+<div id = "s1">
+
+    <div id="s1_1">
+        <img class="img" src="3.jpg" >
+    </div>
+    <div id="s1_2"></div>
+    <div id="s1_3"></div>
+    <div id="s1_4"></div>
+    <!--<div id="s1_5" >-->
+        <!--<img  class="img" src="1.jpg" >-->
+    <!--</div>-->
+
+    <div id="s1_5" >
+        <img id="bgimg" src="3.jpg" >
+        <div id="samlldiv">
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<div id = "s2">
+    <div id="s2_1">
+        <i>2017-2018学年校历</i>
+    </div>
+    <div id="s2_2">
+        第二学期（春季学期）教学工作安排
+    </div>
+
+   <div id="s2_3">
+       <ul>
+       <li>一、开学初安排</li>
+           <p>本科生、研究生3月4日注册，3月5号开始上课。</p>
+       <li>二、教学安排</li>
+           <p style="color: coral">非毕业生</p>
+           <p>3月5日-7月13日 授课、实践、考核</p>
+           <p style="color: coral">2018届毕业生</p>
+           <p>本科生教学活动与6月22日前结束</p>
+       <li>三、运动会</li>
+           <p>5月17日-5月18日</p>
+       <li>四、暑假日期</li>
+           <p>7月16日-9月2日</p>
+       <li>五、节假日</li>
+           <p>清明节、国家劳动节、端午节</p>
+           <p>（具体放假时间详见校办通知）</p>
+   </ul>
+   </div>
+
+
+
+
+</div>
+<div id = "s3">
+    <div id="s3_1"><div class="round"><b>2018年春季学期</b></div></div>
+
+</div>
+<div id = "s4">
+
+    <div id="s4_1"><div class="round"><b>课程表</b></div></d></div>
+    <div id="s4_2">
+        <table  border="1" bgcolor="#00bfff" style="text-align: center">
+            <tr>
+                <th>星期</th>
+                <th>一</th>
+                <th>二</th>
+                <th>三</th>
+                <th>四</th>
+                <th>五</th>
+                <th>六</th>
+                <th>日</th>
+
+            </tr>
+
+            <tr>
+                <td >金石滩校区</td>
+                <td >课程</td>
+                <td >课程</td>
+                <td >课程</td>
+                <td >课程</td>
+                <td >课程</td>
+                <td >课程</td>
+                <td >课程</td>
+            </tr>
+            <tr>
+                <td title="8:00 - 8:45
+8:55 - 9:40">第一大节</td>
+                <td title="教室：A111">高数A2</td>
+                <td title="教室：A111">线性代数</td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td title="教室：A111">数字逻辑</td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td >第二大节</td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td title="教室：A111">高数A2</td>
+                <td title="教室：A112">线性代数</td>
+                <td ></td>
+                <td title="教室：A113">数据结构</td>
+            </tr>
+            <tr>
+                <td >第三大节</td>
+                <td ></td>
+                <td title="教室：A111">线性代数</td>
+                <td ></td>
+                <td ></td>
+                <td title="教室：A111">高数A2</td>
+                <td ></td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td >第四大节</td>
+                <td title="教室：A111">线性代数</td>
+                <td ></td>
+                <td title="教室：A111">离散数学</td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td title="教室：A111">高数A2</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+<div id="s5">
+    <a href="http://www.dlnu.edu.cn/hhh/index.htm"><h2 style="text-align: center">民大官网</h2></a>
+    <br>
+    <a href="http://www.baidu.com"><h2 style="text-align: center">百度一下</h2></a>
+    <br>
+    <a href="http://www.bilibili.com"><h2 style="text-align: center">哔哩哔哩</h2></a>
+    <br>
+    <a href="http://www.taobao.com"> "<h2 style="text-align: center">淘宝</h2></a>
+
+</div>
+
+
+
+
+<!--<div id="s1_5" >-->
+    <!--<img id="bgimg" src="3.jpg" >-->
+    <!--<div id="samlldiv">-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<div id="rightdiv">
+    <img id="IMG" src="3.jpg" >
+</div>
+
+
+<script>
+
+        var s1_5 = document.getElementById("s1_5");
+        var s1_1 = document.getElementById("s1_1");
+        var s1_2 = document.getElementById("s1_2");
+        var s1_3 = document.getElementById("s1_3");
+        var s1_4 = document.getElementById("s1_4");
+        var img = document.getElementsByClassName("img");
+        var s5 = document.getElementById("s5");
+
+        var speed = 0;
+        var ver_speed = 40;
+
+        s1_5.onmouseover = function () {
+
+            var timer = setInterval(function () {
+                speed += 45;
+                s1_5.style.transform = "rotateZ("+ speed +"deg)";
+
+            },200);
+
+
+                s1_5.onmouseout = function () {
+                    clearTimeout(timer);
+
+                }
+
+
+        };
+        s1_1.onmouseover = function () {
+
+            var timer1 = setInterval(function () {
+                speed += 30;
+                s1_1.style.transform = "rotateZ("+ speed +"deg)";
+
+            },500);
+
+
+            s1_1.onmouseout = function () {
+
+                clearTimeout(timer1);
+            }
+
+        };
+        s1_2.onmouseover = function () {
+
+            var timer2 = setInterval(function () {
+                speed += 30;
+                s1_2.style.transform = "rotateZ("+ speed +"deg)";
+
+            },500);
+
+
+            s1_2.onmouseout = function () {
+
+                clearTimeout(timer2);
+            }
+
+        };
+        s1_3.onmouseover = function () {
+
+            var timer3 = setInterval(function () {
+                speed += 30;
+                s1_3.style.transform = "rotateZ("+ speed +"deg)";
+
+            },500);
+
+
+            s1_3.onmouseout = function () {
+
+                clearTimeout(timer3);
+            }
+
+        };
+
+        setInterval(function () {
+
+                speed += 30;
+                s1_4.style.transform = "rotateZ("+ speed +"deg)";
+
+            },200); //s1_4
+
+        setInterval(function () {
+
+        s5.style.top = s5.offsetTop + ver_speed + "px";
+
+        if (s5.offsetTop > window.innerHeight - 420 ){
+
+            ver_speed = -40;
+        }
+
+        if (s5.offsetTop < 20){
+
+            ver_speed = 40;
+        }
+
+
+
+
+
+    },1000);
+
+
+
+
+
+
+
+        var leftdiv = document.getElementById("s1_5");
+        var rightdiv = document.getElementById("rightdiv");
+        var samlldiv = document.getElementById("samlldiv");
+        var imgdiv = document.getElementById("IMG");
+
+        leftdiv.onmouseover = function () {
+            samlldiv.style.display = "block";
+            rightdiv.style.display = "block";
+            imgdiv.style.display = "block";
+
+        };
+        leftdiv.onmouseout = function () {
+            samlldiv.style.display = "none";
+            rightdiv.style.display = "none";
+            imgdiv.style.display = "none";
+        };
+
+        leftdiv.onmousemove = function (ev) {
+
+            var myevent = ev || event;
+            var newleft = myevent.clientX - (samlldiv.clientWidth / 2);
+            var newtop = myevent.clientY - (samlldiv.clientHeight / 2);
+
+            newleft < 0? newleft = 0 : newleft;
+            newtop < 0? newtop = 0 : newtop;
+
+            newleft > leftdiv.clientWidth - samlldiv.clientWidth? newleft = leftdiv.clientWidth - samlldiv.clientWidth : newleft;
+            newtop > leftdiv.clientHeight - samlldiv.clientHeight? newtop = leftdiv.clientHeight - samlldiv.clientHeight : newtop;
+
+            samlldiv.style.left = newleft + "px";
+            samlldiv.style.top = newtop + "px";
+
+            var scale = leftdiv.clientWidth / samlldiv.clientWidth;
+
+            imgdiv.style.left = -scale * newleft + "px";
+            imgdiv.style.top = -scale * newtop + "px";
+
+
+        }
+
+
+</script>
+
+
+
+</body>
+</html>

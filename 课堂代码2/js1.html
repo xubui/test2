@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js1</title>
+    <style type="text/css">
+        #div1 {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #00A000;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+
+<script>
+
+    var e=document.getElementById("div1");
+    var numl=0;
+    var numr=0;
+    var timer=setInterval(function () {
+        numl+=10;
+        numr+=10;
+        e.style.left=numl+"px";
+        e.style.top=numr+"px";
+        e.style.backgroundColor=getRondomColor();
+    },500);
+
+    function getRondomColor() {
+        var red=parseInt(Math.random()*256);
+        var green=parseInt(Math.random()*256);
+        var blue=parseInt(Math.random()*256);
+        return "rgb("+red+","+green+","+blue+")";
+    }
+
+</script>
+</body>
+</html>

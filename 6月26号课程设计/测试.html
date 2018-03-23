@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        .main{
+            width:100px;
+            height: 100px;
+            /*background-color: aqua;*/
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
+    </style>
+    <script src="chance color.js"></script>
+
+
+</head>
+<body>
+
+
+<script>
+
+    for(var i=0; i<300; i++){
+        var newNode = document.createElement("div");
+        newNode.style.backgroundColor = chancecolor();
+        newNode.className = "main";
+        document.body.appendChild(newNode);
+    }
+
+    document.onmousemove = function () {
+
+        var divArray = document.getElementsByTagName("div");
+
+        for (var i = divArray.length - 1; i > 0; i--) {
+            divArray[i].style.left = divArray[i - 1].offsetLeft + "px";
+            divArray[i].style.top = divArray[i - 1].offsetTop + "px";
+
+        }
+        divArray[0].style.left = event.x + "px";
+        divArray[0].style.top = event.y + "px";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
